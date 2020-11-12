@@ -3,7 +3,7 @@ This repo is used for documenting all the files of the final project of cse543t 
 (Please feel free to make any change)
 
 ### Note
-#### currently, this repo is public, hopefully, you guys can add your email address associated with github account to the following line so that I can add you guys as collaborators and make this repo private.
+#### Currently, this repo is public. Hopefully, you guys can add your email address associated with github account to the following line so that I can add you guys as collaborators and make this repo private.
 
 #### Email Addresses:
 
