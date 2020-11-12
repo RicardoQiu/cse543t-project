@@ -27,6 +27,10 @@ Prior to running, adding all the following libraries via conda (feel free to add
 
   ```conda install scipy matplotlib numpy scikit-image tqdm```
 
+### Documentation
+All the documentation is supposed to be hosted on Overleaf
+Overleaf Link: https://www.overleaf.com/6326894856mfnjrztcmwft
+
 ### References
 - [Image Style Transfer Using Convolutional Neural Networks](https://openaccess.thecvf.com/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)
 - [AdaBelief Optimizer: Adapting Stepsizes by the Belief in Observed Gradients](https://arxiv.org/pdf/2010.07468.pdf)
