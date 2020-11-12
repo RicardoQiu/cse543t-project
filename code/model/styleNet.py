@@ -1,5 +1,7 @@
 ##################################################################
 # This module is created to host the architecture of our network
+# The majority of our code may be adapte from the official 
+# implementation
 ##################################################################
 
 import torch
