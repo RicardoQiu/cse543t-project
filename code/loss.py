@@ -1,3 +1,8 @@
+##################################################################
+# This module is created to host all the lost functions that will
+# be used.
+##################################################################
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -5,17 +10,19 @@ import torch.nn.functional as F
 
 class ContentLoss(nn.Module):
 
-    def __init__(self, target,):
+    def __init__(self, target, ):
         super(ContentLoss, self).__init__()
         # we 'detach' the target content from the tree used
         # to dynamically compute the gradient: this is a stated value,
         # not a variable. Otherwise the forward method of the criterion
         # will throw an error.
         self.target = target.detach()
+        self.loss = None
 
     def forward(self, input):
         self.loss = F.mse_loss(input, self.target)
         return input
+
 
 def gram_matrix(input):
     a, b, c, d = input.size()  # a=batch size(=1)
@@ -36,6 +43,7 @@ class StyleLoss(nn.Module):
     def __init__(self, target_feature):
         super(StyleLoss, self).__init__()
         self.target = gram_matrix(target_feature).detach()
+        self.loss = None
 
     def forward(self, input):
         G = gram_matrix(input)
