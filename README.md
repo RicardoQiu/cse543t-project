@@ -3,9 +3,11 @@ This repo is used for documenting all the files of the final project of cse543t 
 (Please feel free to make any change)
 
 ### Note
-#### currently, this repo is publib, hopefully, you guys can add your email address associated with github account to the following line so that I can add you guys as collaborators and make this repo private.
+#### currently, this repo is public, hopefully, you guys can add your email address associated with github account to the following line so that I can add you guys as collaborators and make this repo private.
 
-Email Addresses:
+#### Email Addresses:
+
+
 
 
 Please make sure all the code is included inside of the `code` folder. All the function or module should be located properly.
