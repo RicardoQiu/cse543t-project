@@ -6,7 +6,8 @@ This repo is used for documenting all the files of the final project of cse543t 
 ##### Please make sure all the code is included inside of the `code` folder. All the function or module should be located properly.
 
 ### Possible Thoughts
-$ \mathcal{L} = $
+<p align="center"><img src="https://rawgit.com/in	git@github.com:RicardoQiu/cse543t-project/master/svgs/067f29c23ebb9edd9e54721044d1a27e.svg?invert_in_darkmode" align=middle width=96.57905729999999pt height=16.1480121pt/></p>
+
 
 
 ### Dataset
