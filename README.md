@@ -3,14 +3,10 @@ This repo is used for documenting all the files of the final project of cse543t 
 (Please feel free to make any change)
 
 ### Note
-#### Currently, this repo is public. Hopefully, you guys can add your email address associated with github account to the following line so that I can add you guys as collaborators and make this repo private.
+##### Please make sure all the code is included inside of the `code` folder. All the function or module should be located properly.
 
-#### Email Addresses:
+### Possible Thoughts
 
-
-
-
-Please make sure all the code is included inside of the `code` folder. All the function or module should be located properly.
 
 ### Dataset
 We will use the same dataset as used in the original paper
@@ -43,4 +39,9 @@ Overleaf Link: https://www.overleaf.com/6326894856mfnjrztcmwft
 - [Image Style Transfer Using Convolutional Neural Networks](https://openaccess.thecvf.com/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)
 - [AdaBelief Optimizer: Adapting Stepsizes by the Belief in Observed Gradients](https://arxiv.org/pdf/2010.07468.pdf)
 - [ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION](https://arxiv.org/pdf/1412.6980.pdf)
+- [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](https://arxiv.org/pdf/1603.08155.pdf)
+
+### Tutorials
+- [Original Neural Style Transfer Algorithm (pytorch official--paper1)](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
+- [Fast Neural Style Transfer Algorithm (pytorch official--paper4)](https://github.com/pytorch/examples/tree/master/fast_neural_style)
 
