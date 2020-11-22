@@ -6,7 +6,9 @@ This repo is used for documenting all the files of the final project of cse543t 
 ##### Please make sure all the code is included inside of the `code` folder. All the function or module should be located properly.
 
 ### Possible Thoughts
-Add regularizer to the original loss function.
+* Add regularizer to the original loss function;
+* Analyze the convexity of loss function;
+* using different optimizer to minimize the loss function; 
 
 
 
