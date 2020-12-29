@@ -49,3 +49,60 @@ class StyleLoss(nn.Module):
         G = gram_matrix(input)
         self.loss = F.mse_loss(G, self.target)
         return input
+
+
+class LaplaceFilter(nn.Module):
+    @staticmethod
+    def _make_kernel():
+        k = torch.tensor([
+            [0, -1, 0],
+            [-1, 4, -1],
+            [0, -1, 0]
+        ], dtype=torch.float).expand(1, 3, 3, 3)
+        return k
+
+    def __init__(self, device):
+        super().__init__()
+        self.k = nn.Parameter(self._make_kernel(), False).to(device)
+
+    def forward(self, input):
+        return F.conv2d(input, self.k, padding=1)
+
+
+class LapStyleLoss(nn.Module):
+    """
+    Reimplementation of http://arxiv.org/abs/1707.01253
+    """
+
+    def __init__(self, device, content, pooling_kernel_size=2):
+        super().__init__()
+        self.edge_detector = nn.Sequential(
+            nn.AvgPool2d(pooling_kernel_size),
+            LaplaceFilter(device)
+        )
+        with torch.no_grad():
+            self.target = self.edge_detector(content)
+
+    def forward(self, input):
+        return F.mse_loss(self.edge_detector(input), self.target)
+
+    # def set_target(self, content: torch.Tensor):
+    #     with torch.no_grad():
+    #         self.target = self.edge_detector(content)
+    #
+    # def compute(self, image: torch.Tensor):
+    #     edges = self.edge_detector(image)
+    #     return F.mse_loss(edges, self.target)
+
+
+class TVLoss(nn.Module):
+    def __init__(self, strength):
+        super(TVLoss, self).__init__()
+        self.strength = strength
+        self.loss = None
+
+    def forward(self, input):
+        x_diff = input[:, :, 1:, :] - input[:, :, :-1, :]
+        y_diff = input[:, :, :, 1:] - input[:, :, :, :-1]
+        self.loss = self.strength * (torch.sum(torch.abs(x_diff)) + torch.sum(torch.abs(y_diff)))
+        return input

@@ -6,3 +6,13 @@
 # quality.
 ##################################################################
 import torch.optim as optim
+
+
+def get_optimizer(input_img, args):
+    # this line to show that input is a parameter that requires a gradient
+    if args.optimizer == "L-BFGS":
+        optimizer = optim.LBFGS([input_img.requires_grad_()])
+    elif args.optimizer == "Adam":
+        optimizer = optim.Adam([input_img.requires_grad_()])
+    return optimizer
+

@@ -4,17 +4,17 @@
 # implementation
 ##################################################################
 import copy
-import numpy as np
-import torch
 import torch.nn as nn
 
+from dataloader import Normalization
+from loss import ContentLoss, StyleLoss
 
 # desired depth layers to compute style/content losses :
 content_layers_default = ['conv_4']
 style_layers_default = ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5']
 
 
-def get_style_model_and_losses(cnn, normalization_mean, normalization_std,
+def get_style_model_and_losses(cnn, device, normalization_mean, normalization_std,
                                style_img, content_img,
                                content_layers=content_layers_default,
                                style_layers=style_layers_default):
