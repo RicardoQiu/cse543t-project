@@ -40,10 +40,21 @@ All the documentation is supposed to be hosted on Overleaf
 Overleaf Link: https://www.overleaf.com/6326894856mfnjrztcmwft
 
 ### References
-- [Image Style Transfer Using Convolutional Neural Networks](https://openaccess.thecvf.com/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)
-- [AdaBelief Optimizer: Adapting Stepsizes by the Belief in Observed Gradients](https://arxiv.org/pdf/2010.07468.pdf)
+
+[comment]: <> (- [Image Style Transfer Using Convolutional Neural Networks]&#40;https://openaccess.thecvf.com/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf&#41;)
+
+[comment]: <> (- [AdaBelief Optimizer: Adapting Stepsizes by the Belief in Observed Gradients]&#40;https://arxiv.org/pdf/2010.07468.pdf&#41;)
 - [ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION](https://arxiv.org/pdf/1412.6980.pdf)
-- [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](https://arxiv.org/pdf/1603.08155.pdf)
+
+[comment]: <> (- [Perceptual Losses for Real-Time Style Transfer and Super-Resolution]&#40;https://arxiv.org/pdf/1603.08155.pdf&#41;)
+
+- ["A Neural Algorithm of Artistic Style"](https://arxiv.org/pdf/1508.06576.pdf) by Leon A. Gatys, Alexander S. Ecker, Matthias Bethge
+
+- ["Image Style Transfer Using Convolutional Neural Networks"](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) by Leon A. Gatys, Alexander S. Ecker, Matthias Bethge
+
+- ["Preserving Color in Neural Artistic Style Transfer"](https://arxiv.org/pdf/1606.05897.pdf) by Leon A. Gatys, Matthias Bethge, Aaron Hertzmann, Eli Shechtman
+
+- ["Laplacian-Steered Neural Style Transfer"](https://arxiv.org/pdf/1707.01253.pdf) by Shaohua Li, Xinxing Xu, Liqiang Nie, Tat-Seng Chua
 
 ### Tutorials
 - [Original Neural Style Transfer Algorithm (pytorch official--paper1)](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
