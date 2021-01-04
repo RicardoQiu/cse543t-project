@@ -1,0 +1,2 @@
+#python main.py eval --content-image ../data/content/YellowLabrador.jpg  --style-image ../data/style/kandinsky.jpg --output-image ../res/optm --cuda --content-weight 0.01 --style-weight 10000 --num-steps 1000
+#python main.py eval --content-image ../data/content/YellowLabrador.jpg  --style-image ../data/style/kandinsky.jpg --output-image ../res/optm --cuda --content-weight 0.01 --style-weight 10000 --optimizer Adam --lr 0.1 --num-steps 1000

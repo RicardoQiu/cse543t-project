@@ -26,6 +26,8 @@ def get_eval_images(args):
     content_img = loader(Image.open(args.content_image)).unsqueeze(0)
     style_img = loader(Image.open(args.style_image)).unsqueeze(0)
 
+    # print(content_img.size(), style_img.size())
+
     assert style_img.size() == content_img.size(), \
         "we need to import style and content images of the same size"
 

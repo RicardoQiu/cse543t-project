@@ -86,23 +86,13 @@ class LapStyleLoss(nn.Module):
     def forward(self, input):
         return F.mse_loss(self.edge_detector(input), self.target)
 
-    # def set_target(self, content: torch.Tensor):
-    #     with torch.no_grad():
-    #         self.target = self.edge_detector(content)
-    #
-    # def compute(self, image: torch.Tensor):
-    #     edges = self.edge_detector(image)
-    #     return F.mse_loss(edges, self.target)
-
 
 class TVLoss(nn.Module):
-    def __init__(self, strength):
+    def __init__(self):
         super(TVLoss, self).__init__()
-        self.strength = strength
-        self.loss = None
 
     def forward(self, input):
         x_diff = input[:, :, 1:, :] - input[:, :, :-1, :]
         y_diff = input[:, :, :, 1:] - input[:, :, :, :-1]
-        self.loss = self.strength * (torch.sum(torch.abs(x_diff)) + torch.sum(torch.abs(y_diff)))
-        return input
+        loss = torch.sum(torch.abs(x_diff)) + torch.sum(torch.abs(y_diff))
+        return loss
